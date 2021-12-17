@@ -5,10 +5,14 @@ let actorD = item.actor;
 let level = actorD.items.getName("Barbarian").data.data.levels;
 let subClass = actorD.items.getName("Barbarian").data.data.subclass;
 let name = tokenD.data.name;
+
+// Mesages for when your barbarian gets angry. Feel free to customize.
 let biteMsg = name + " grows fierce, snarly teeth!";
 let clawMsg = name + " grows sharp, slashing claws!";
 let tailMsg = name + " grows a long, swinging tail!";
 let rageMsg = name + " is ... RAGING!";
+
+// Define weapon if no weapon will be chosen later.
 let weapon = "";
 
 const animation = async () => {
