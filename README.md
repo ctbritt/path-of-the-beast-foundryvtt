@@ -18,4 +18,4 @@ If you don't follow the Path of the Beast, you will not see a pop-up dialog, and
 ## Notes
 I am planning updates to include the weapons json data in the macro itself, so you don't need to import the ones I've uploaded. This will allow me to also check for proper Barbarian level and set the magic tag appropriately. (At 6th level, the rage weapons count as magical for overcoming resistance to non-magical s/b/p damage.)
 ## Thanks
-Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to gazkhan-jules for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs. 
+Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs. 
