@@ -150,7 +150,6 @@ const options = {
   comparisonKeys: { ActiveEffect: "label" },
   name: "Rage", //Let's give the mutation a name so when we shift-click the revert button, we'll identify the right mutation to revert
 };
-console.log(embedded.Item.name);
 let updates = mergeObject(rageAE, weapon);
 
 await warpgate.mutate(token.document, updates, mCallbacks, options); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
