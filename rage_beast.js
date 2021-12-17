@@ -1,3 +1,4 @@
+// throat clearing to get data on token
 const lastArg = args[args.length - 1];
 const tokenD = canvas.tokens.get(lastArg.tokenId);
 let actorD = item.actor;
@@ -174,6 +175,7 @@ if (weapon.msg) {
   ui.notifications.info(rageMsg);
 }
 
+// merge updates for spawning
 let updates = mergeObject(rageAE, weapon.update);
 
 await warpgate.mutate(token.document, updates, mCallbacks, options); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
