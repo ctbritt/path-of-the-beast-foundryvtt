@@ -6,6 +6,7 @@ Requires
 - advanced macros
 - item macro
 - warpgate 
+
 You should also have items for the weapons already created in your item directory. I've included uploaded json files for the ones I use.
 ## Usage instructions
 1. Copy the rage_beast.js macro to the Item Macro on the Rage feature. Set it to trigger on-use in the Item Macro field. Remove all other active effects from the Rage feature. This will handle the bonus damage according to level, the slashing/bludgeoning/piercing damage resistance, and the advantages to strength saving throws and ability checks.
@@ -17,4 +18,4 @@ If you don't follow the Path of the Beast, you will not see a pop-up dialog, and
 ## Notes
 I am planning updates to include the weapons json data in the macro itself, so you don't need to import the ones I've uploaded. This will allow me to also check for proper Barbarian level and set the magic tag appropriately. (At 6th level, the rage weapons count as magical for overcoming resistance to non-magical s/b/p damage.)
 ## Thanks
-Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patience hand-holding and for writing Warpgate, as well as to gazkhan-jules for their original rage macro that inspired me to expand on this. The animate is theirs. 
+Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to gazkhan-jules for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs. 
