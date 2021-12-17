@@ -2,12 +2,6 @@ let actorD = item.actor;
 let level = actorD.items.getName("Barbarian").data.data.levels;
 let subClass = actorD.items.getName("Barbarian").data.data.subclass;
 
-// function condition(eventData) {
-//   console.log(token.id, eventData.actorData.token);
-//   console.log(token.id === eventData.actorData.token._id);
-//   return token.id === eventData.actorData.token._id; //This condition makes sure we have the correct token to revert the mutation from
-// }
-
 let weapon = "";
 
 // Define the weapons from existing items
@@ -123,4 +117,3 @@ const options = {
 let updates = mergeObject(rageAE, weapon);
 
 await warpgate.mutate(token.document, updates, {}, options); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
-// warpgate.event.trigger(warpgate.EVENT.REVERT, effectEnd, condition);
