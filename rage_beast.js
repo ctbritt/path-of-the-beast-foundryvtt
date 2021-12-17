@@ -1,6 +1,13 @@
+const lastArg = args[args.length - 1];
+const tokenD = canvas.tokens.get(lastArg.tokenId);
 let actorD = item.actor;
 let level = actorD.items.getName("Barbarian").data.data.levels;
 let subClass = actorD.items.getName("Barbarian").data.data.subclass;
+let name = tokenD.data.name;
+let biteMsg = name + " grows fierce, snarly teeth!";
+let clawMsg = name + " grows sharp, slashing claws!";
+let tailMsg = name + " grows a long, swinging tail!";
+let rageMsg = name + " is ... RAGING!";
 let weapon = "";
 
 const animation = async () => {
@@ -58,9 +65,12 @@ if (subClass == "Path of the Beast") {
       {
         label: "Bite",
         value: {
-          embedded: {
-            Item: {
-              [bite.name]: bite,
+          msg: biteMsg,
+          update: {
+            embedded: {
+              Item: {
+                [bite.name]: bite,
+              },
             },
           },
         },
@@ -68,9 +78,12 @@ if (subClass == "Path of the Beast") {
       {
         label: "Claws",
         value: {
-          embedded: {
-            Item: {
-              [claws.name]: claws,
+          msg: clawMsg,
+          update: {
+            embedded: {
+              Item: {
+                [claws.name]: claws,
+              },
             },
           },
         },
@@ -78,10 +91,13 @@ if (subClass == "Path of the Beast") {
       {
         label: "Tail",
         value: {
-          embedded: {
-            Item: {
-              [tail.name]: tail,
-              [tailSwipe.name]: tailSwipe,
+          msg: tailMsg,
+          update: {
+            embedded: {
+              Item: {
+                [tail.name]: tail,
+                [tailSwipe.name]: tailSwipe,
+              },
             },
           },
         },
@@ -150,7 +166,15 @@ const options = {
   comparisonKeys: { ActiveEffect: "label" },
   name: "Rage", //Let's give the mutation a name so when we shift-click the revert button, we'll identify the right mutation to revert
 };
-let updates = mergeObject(rageAE, weapon);
+
+// send fun message about weapons if available
+if (weapon.msg) {
+  ui.notifications.info(weapon.msg);
+} else {
+  ui.notifications.info(rageMsg);
+}
+
+let updates = mergeObject(rageAE, weapon.update);
 
 await warpgate.mutate(token.document, updates, mCallbacks, options); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
 warpgate.event.trigger(warpgate.EVENT.REVERT, animationEnd, condition);
