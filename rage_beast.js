@@ -105,7 +105,11 @@ if (subClass == "Path of the Beast") {
     ],
     title: "Which Form of the Beast?",
     content: `<p><img src="https://www.dndbeyond.com/avatars/thumbnails/13710/613/420/618/637402706646069197.png" height="100" style="float:left;outline:0;border:0;vertical-align:middle;margin:0px 10px">When you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.</p>
+<<<<<<< HEAD
     <p>You choose the weapon’s form each time you rage:</p>`,
+=======
+<p>You choose the weapon’s form each time you rage:</p>`,
+>>>>>>> 8147d52825d56182e6683b94ebad64dbe2da9f1a
   };
   weapon = await warpgate.buttonDialog(buttonData);
 }
