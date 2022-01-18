@@ -21,11 +21,36 @@ const animation = async () => {
 
   new Sequence()
     .effect()
+    .file("jb2a.markers.02.pink")
+    .atLocation(tokenD)
+    .duration(3000)
+    .fadeIn(500)
+    .fadeOut(500)
+    .scale(0.75)
+    .waitUntilFinished(-500)
+
+    .effect()
+    .file("jb2a.impact.purple.1")
+    .atLocation(tokenD)
+    .fadeIn(100)
+    .fadeOut(200)
+    .waitUntilFinished(-500)
+    .scale(0.75)
+
+    .effect()
+    .file("jb2a.impact.011.dark_purple")
+    .atLocation(tokenD)
+    .fadeIn(500)
+    .fadeOut(500)
+    .scale(0.75)
+    .waitUntilFinished(-500)
+
+    .effect()
     .attachTo(token) //Instead of atLocation(), we want the animation to be stuck to the token so it follows it around
     .file(`jb2a.energy_strands.complete.${effectColor}.01`)
     .belowTokens() //by default, the effect would be played above the tokens, we want this one to be played underneath so we can place the overlay above it
     .scale(effectScale)
-    .persist() //This will make it contiously loop until dismissed by another bit of code we'll define underneath as the animationEnd() function.
+    .persist() //This will make it continuously loop until dismissed by another bit of code we'll define underneath as the animationEnd() function.
     .name(`${item.actor.data.name}- Rage -${token.data._id}`) //We want a unique name that will make dismissing it later on easier.
     .effect()
     .attachTo(token)
@@ -55,13 +80,9 @@ function condition(eventData) {
 
 // Define the weapons from existing items
 let bite = game.items.getName("Form of the Beast: Bite").toObject();
-delete bite._id;
 let claws = game.items.getName("Form of the Beast: Claws").toObject();
-delete claws._id;
 let tail = game.items.getName("Form of the Beast: Tail").toObject();
-delete tail._id;
 let tailSwipe = game.items.getName("Form of the Beast: Tail Swipe").toObject();
-delete tailSwipe._id;
 
 // Check if correct subclass is in place
 if (subClass == "Path of the Beast") {
