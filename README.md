@@ -5,11 +5,13 @@ Requires
 - midi-qol
 - advanced macros
 - item macro
-- warpgate 
+- warpgate (for mutation of the actor)
+- Dfreds Convenient Effects (for basic Rage application)
+- Sequencer (for the pretty effects)
 
 You should also have items for the weapons already created in your item directory. I've included uploaded json files for the ones I use.
 ## Usage instructions
-1. Copy the rage_beast.js macro to the Item Macro on the Rage feature. Set it to trigger on-use in the Item Macro field. Remove all other active effects from the Rage feature. This will handle the bonus damage according to level, the slashing/bludgeoning/piercing damage resistance, and the advantages to strength saving throws and ability checks.
+1. Copy the rage_beast.js macro to the Item Macro on the Rage feature. Set it to trigger as a DAE Macro (`Macro.ItemMacro > Custom > @item`). Remove all other active effects from the Rage feature. This will add the appropriate weapons while Dfred's Rage handles the basic Rage effects.
 2. Create a four new items in your item directory. (It doesn't matter what you name them.) Right-click on each item and import a .json file for the rage weapons for each new item you created. 
 
 That's it! Now, when you rage, you will get the basic rage effects and, assuming your barbarian follows the Path of the Beast, you will get a popup dialog asking which kind of weapon you wish to manifest. If you don't want to manifest a weapon, just close the dialog window without choosing one. The basic rage effects will be applied but no weapon will be generated. 
