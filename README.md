@@ -9,6 +9,7 @@ Requires
 - item macro
 - warpgate (for mutation of the actor)
 - Sequencer (for the pretty effects)
+- Jb2a — i use the patreon version, but you can use the free version if you modify the marked lines.
 - Automated Animations (optional) — I use this for an energy strand overlay for the Rage item, but it’s totally optional.
 
 
