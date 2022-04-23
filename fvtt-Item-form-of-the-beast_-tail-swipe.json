@@ -121,7 +121,13 @@
         "dae": {
           "stackable": "none",
           "macroRepeat": "none",
+<<<<<<< HEAD
           "specialDuration": ["1Reaction"],
+=======
+          "specialDuration": [
+            "1Reaction"
+          ],
+>>>>>>> 7fede5e3933ad6d125dea1e739976b88963b8e1b
           "transfer": false,
           "durationExpression": ""
         },
