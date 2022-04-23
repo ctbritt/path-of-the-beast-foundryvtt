@@ -26,7 +26,7 @@ if (args[0] === "on") {
   const animation = async () => {
     new Sequence()
       .effect()
-      .file("jb2a.markers.02.pink")
+      .file("jb2a.markers.02.pink") // patreon version
       .atLocation(tokenD)
       .duration(3000)
       .fadeIn(500)
@@ -35,7 +35,7 @@ if (args[0] === "on") {
       .waitUntilFinished(-500)
 
       .effect()
-      .file("jb2a.impact.purple.1")
+      .file("jb2a.impact.purple.1") // patreon version
       .atLocation(tokenD)
       .fadeIn(100)
       .fadeOut(200)
@@ -43,7 +43,7 @@ if (args[0] === "on") {
       .scale(0.75)
 
       .effect()
-      .file("jb2a.impact.011.dark_purple")
+      .file("jb2a.impact.011.dark_purple") // patreon version
       .atLocation(tokenD)
       .fadeIn(500)
       .fadeOut(500)
