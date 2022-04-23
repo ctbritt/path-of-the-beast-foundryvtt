@@ -10,7 +10,7 @@ Requires
 - warpgate (for mutation of the actor)
 - Sequencer (for the pretty effects)
 - Jb2a — i use the patreon version, but you can use the free version if you modify the marked lines.
-- Automated Animations (optional) — I use this for an energy strand overlay for the Rage item, but it’s totally optional.
+- Automated Animations (optional) — I use this for an energy strand overlay for the Rage item.
 - _If you have Dfred's convenient effects installed, make sure it is set to not apply to this rage. This handles all aspects of the raging, including extra damage, resistances to damage, and advantages on Strength checks and saves._
 
 # This is a total revamp and now everything, including scaling Rage damage and whether the beastial weapons are magical or not is automated with a click of a button. You no longer need separate items in your items directory, either, as the macro has the data on the items built in.
