@@ -32,8 +32,7 @@ This update will automatically scale the rage damage based on the barbarian leve
 
 The rage_beast.js macro is included for reference only. It's already embedded in the .json file of the Rage item.
 
-**If you have Dfred's convenient effects installed, make sure it is set to not apply to this rage. This handles all aspects of the raging, including extra damage, resistances to damage, and advantages on Strength checks and saves.
-**
+_If you have Dfred's convenient effects installed, make sure it is set to not apply to this rage. This handles all aspects of the raging, including extra damage, resistances to damage, and advantages on Strength checks and saves._
 ## Many thanks!
 
 Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs.
