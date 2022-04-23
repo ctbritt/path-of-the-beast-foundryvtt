@@ -1,4 +1,4 @@
-console.log(args);
+console.log("args: ", args);
 // throat clearing to get data on token
 const lastArg = args[args.length - 1];
 let tokenD;
@@ -8,6 +8,12 @@ let item = args[1]; //passed by @item in the DAE field
 let level = tokenD.items.getName("Barbarian").data.data.levels;
 let subClass = tokenD.items.getName("Barbarian").data.data.subclass;
 let name = tokenD.data.token.name;
+let rageDamage = Math.ceil(Math.floor(level / (9 - Math.floor(level / 9)) + 2)); //Some clever math to add the correct amount, depending on the barbarian level
+
+console.log("level: ", level);
+console.log("item: ", item);
+console.log("subClass: ", subClass);
+console.log("rageDamage: ", rageDamage);
 
 if (args[0] === "on") {
   // Mesages for when your barbarian gets angry. Feel free to customize.
@@ -48,21 +54,6 @@ if (args[0] === "on") {
       .fadeOut(500)
       .scale(0.75)
       .waitUntilFinished(-500)
-
-      // .effect()
-      // .attachTo(token) //Instead of atLocation(), we want the animation to be stuck to the token so it follows it around
-      // .file(`jb2a.energy_strands.complete.${effectColor}.01`)
-      // .belowTokens() //by default, the effect would be played above the tokens, we want this one to be played underneath so we can place the overlay above it
-      // .scale(effectScale)
-      // .persist() //This will make it continuously loop until dismissed by another bit of code we'll define underneath as the animationEnd() function.
-      // .name(`${item.actor.data.name}- Rage -${token.data._id}`) //We want a unique name that will make dismissing it later on easier.
-      // .effect()
-      // .attachTo(token)
-      // .file(`jb2a.energy_strands.overlay.${effectColor}.01`)
-      // .scale(effectScale)
-      // .persist()
-      // .fadeOut(500)
-      // .name(`${item.actor.data.name}- Rage -${token.data._id}`) //Named it the same as the previous effect so we can dismiss both effects at the same time
       .play();
   };
 
@@ -145,7 +136,7 @@ if (args[0] === "on") {
     weapon = await warpgate.buttonDialog(buttonData);
   }
 
-  // Set universal Rage active effects
+  //Set universal Rage active effects
   // let rageAE = {
   //   embedded: {
   //     ActiveEffect: {
@@ -155,9 +146,7 @@ if (args[0] === "on") {
   //           {
   //             key: "data.bonuses.mwak.damage", //add the bonus to melee weapon attacks
   //             mode: 2,
-  //             value: Math.ceil(
-  //               Math.floor(level / (9 - Math.floor(level / 9)) + 2)
-  //             ), //Some clever math to add the correct amount, depending on the barbarian level
+  //             value: `${rageDamage}`,
   //             priority: 0,
   //           },
   //           {
@@ -180,13 +169,13 @@ if (args[0] === "on") {
   //           },
   //           {
   //             key: "flags.midi-qol.advantage.ability.save.str",
-  //             value: 1,
+  //             value: "1",
   //             mode: 0,
   //             priority: 0,
   //           },
   //           {
   //             key: "flags.midi-qol.advantage.ability.check.str",
-  //             value: 1,
+  //             value: "1",
   //             mode: 0,
   //             priority: 0,
   //           },
@@ -196,6 +185,7 @@ if (args[0] === "on") {
   //     },
   //   },
   // };
+  // console.log("rageAE: ", rageAE);
 
   const options = {
     comparisonKeys: { ActiveEffect: "label" },
@@ -210,8 +200,13 @@ if (args[0] === "on") {
   }
 
   // merge updates for spawning
-  // let updates = mergeObject(rageAE, weapon.update);
+  //   let updates = {
+  //     ...rageAE,
+  //     ...weapon.update,
+  //   };
   let updates = weapon.update;
+  // let updates = mergeObject(rageAE, weapon.update);
+  console.log("updates: ", updates);
 
   await warpgate.mutate(token.document, updates, mCallbacks, options); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
   // warpgate.event.trigger(warpgate.EVENT.REVERT, animationEnd, condition);
