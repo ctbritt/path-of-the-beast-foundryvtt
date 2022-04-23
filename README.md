@@ -9,7 +9,7 @@ Requires
 - item macro
 - warpgate (for mutation of the actor)
 - Sequencer (for the pretty effects)
-- JB2A — Patreon preferred, but you can change a line of code and it will work with the free version
+- Automated Animations (optional) — I use this for an energy strand overlay for the Rage item, but it’s totally optional.
 
 
 # This is a total revamp and now everything, including scaling Rage damage and whether the beastial weapons are magical or not is automated with a click of a button. You no longer need separate items in your items directory, either, as the macro has the data on the items built in.
