@@ -8,9 +8,9 @@ Requires
 - advanced macros
 - item macro
 - warpgate (for mutation of the actor)
-- Dfreds Convenient Effects (for basic Rage application)
 - Sequencer (for the pretty effects)
-- Automated Animations (optional)
+- JB2A — Patreon preferred, but you can change a line of code and it will work with the free version
+
 
 # This is a total revamp and now everything, including scaling Rage damage and whether the beastial weapons are magical or not is automated with a click of a button. You no longer need separate items in your items directory, either, as the macro has the data on the items built in.
 
@@ -30,7 +30,7 @@ If you don't follow the Path of the Beast, you will not see a pop-up dialog, and
 
 This update will automatically scale the rage damage based on the barbarian levels you have, as well as correctly determine if the manifested weapons should do magical damage or not. (At 6th level, the rage weapons count as magical for overcoming resistance to non-magical s/b/p damage.)
 
-The rage_beast.js macro is included for reference only. It's already embedded in the .json file of the Rage item.
+The `rage_beast.js` macro is included for reference only. It's already embedded in the .json file of the Rage item.
 
 _If you have Dfred's convenient effects installed, make sure it is set to not apply to this rage. This handles all aspects of the raging, including extra damage, resistances to damage, and advantages on Strength checks and saves._
 ## Many thanks!
