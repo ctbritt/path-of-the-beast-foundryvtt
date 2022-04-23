@@ -76,9 +76,7 @@ if (args[0] === "on") {
     data: {
       description: {
         value:
-          "<p><strong>Bite.</strong> Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 + " +
-          `${mod}` +
-          " piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.</p>",
+          "<p><strong>Bite.</strong> Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 + 4 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have fewer than half your hit points when you hit.</p>",
       },
       quantity: 1,
       weight: 0,
@@ -93,10 +91,12 @@ if (args[0] === "on") {
       target: {
         value: 1,
         width: null,
+        units: "",
         type: "creature",
       },
       range: {
         value: 5,
+        long: null,
         units: "ft",
       },
       actionType: "mwak",
@@ -116,6 +116,29 @@ if (args[0] === "on") {
       },
       midiProperties: {
         magicdam: `${mgcProp}`,
+      },
+      "midi-qol": {
+        onUseMacroName: "[postActiveEffects]ItemMacro",
+      },
+      itemacro: {
+        macro: {
+          data: {
+            _id: null,
+            name: "Form of the Beast: Bite",
+            type: "script",
+            author: "jM4h8qpyxwTpfNli",
+            img: "icons/svg/dice-target.svg",
+            scope: "global",
+            command:
+              'async function wait(ms) {\n  return new Promise((resolve) => {\n    setTimeout(resolve, ms);\n  });\n}\nconst lastArg = args[args.length - 1];\nif (lastArg.hitTargets.length === 0) return {};\nlet tokenD = canvas.tokens.get(lastArg.tokenId);\nlet target = canvas.tokens.get(lastArg.hitTargets[0].id);\nconst actorD = game.actors.get(lastArg.actor._id);\nlet itemD = await fromUuid(lastArg.itemUuid);\nlet gameRound = game.combat ? game.combat.round : 0;\nlet hpValue = actorD.data.data.attributes.hp.value;\nlet hpMax = actorD.data.data.attributes.hp.max;\nlet prof = actorD.data.data.attributes.prof;\nlet healType = "healing";\nlet damageType = "piercing";\nlet damageTotal = lastArg.damageDetail.find((i) => i.type === damageType);\nif (!damageTotal) return ui.notifications.error("Deal damage first");\nlet newHP;\nif (hpValue < Math.floor(hpMax / 2)) {\n  newHP = hpValue + prof;\n} else {\n\treturn;\n}\nawait actorD.update({\n\t"data.attributes.hp.value": Math.min(actorD.data.data.attributes.hp.max, newHP)\n})\n\n\nlet healMessage = `<div class="midi-qol-flex-container"><div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">hits ${target.name} </div><img src="${target.data.img}" width="30" height="30" style="border:0px"></div><div class="midi-qol-flex-container"><div class="midi-qol-target-npc midi-qol-target-name" id="${tokenD.id}">heals ${tokenD.name} <span style="color:green">+${prof}</span></div><img src="${tokenD.data.img}" width="30" height="30" style="border:0px"></div>`;\n//await wait(400);\nlet chatMessage = await game.messages.get(args[0].itemCardId);\nlet content = await duplicate(chatMessage.data.content);\nlet searchString = /<div class="midi-qol-hits-display">[\\s\\S]*<div class="end-midi-qol-hits-display">/g;\nlet replaceString = `<div class="midi-qol-hits-display"><div class="end-midi-qol-hits-display">${healMessage}`;\ncontent = await content.replace(searchString, replaceString);\nawait chatMessage.update({ content: content });',
+            folder: null,
+            sort: 0,
+            permission: {
+              default: 0,
+            },
+            flags: {},
+          },
+        },
       },
     },
   };
