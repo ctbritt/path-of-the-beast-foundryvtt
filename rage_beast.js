@@ -23,8 +23,6 @@ if (args[0] === "on") {
   let weapon = "";
 
   const animation = async () => {
-    let effectScale = 0.25;
-    let effectColor = "dark_red"; //Change "blue" to "dark_red" for example if you have the patreon version of JB2A
 
     new Sequence()
       .effect()
@@ -70,13 +68,7 @@ if (args[0] === "on") {
     return token.id === eventData.actorData.token._id; //This condition makes sure we have the correct token to revert the mutation from
   }
 
-  // Define the weapons from existing items
-  // let bite = game.items.getName("Form of the Beast: Bite").toObject();
-  // let claws = game.items.getName("Form of the Beast: Claws").toObject();
-  // let tail = game.items.getName("Form of the Beast: Tail").toObject();
-  // let tailSwipe = game.items
-  //   .getName("Form of the Beast: Tail Swipe")
-  //   .toObject();
+  // Define the weapons
   let bite = {
     name: "Form of the Beast: Bite",
     type: "weapon",
