@@ -30,6 +30,8 @@ If you don't follow the Path of the Beast, you will not see a pop-up dialog, and
 
 This update will automatically scale the rage damage based on the barbarian levels you have, as well as correctly determine if the manifested weapons should do magical damage or not. (At 6th level, the rage weapons count as magical for overcoming resistance to non-magical s/b/p damage.)
 
+The rage_beast.js macro is included for reference only. It's already embedded in the .json file of the Rage item.
+
 ## Many thanks!
 
 Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs.
