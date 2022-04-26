@@ -100,7 +100,6 @@ if (args[0] === "on") {
         units: "ft",
       },
       actionType: "mwak",
-      attackBonus: "0",
       damage: {
         parts: [["1d8[piercing]+@mod", "piercing"]],
       },
@@ -110,15 +109,63 @@ if (args[0] === "on") {
       },
       proficient: true,
     },
+    effects: [
+      {
+        _id: "SwjTdomYq58tha05",
+        changes: [
+          {
+            key: "flags.dnd5e.DamageBonusMacro",
+            mode: 0,
+            value: "ItemMacro.Form of the Beast: Bite",
+            priority: "20",
+          },
+        ],
+        disabled: false,
+        duration: {
+          startTime: null,
+        },
+        icon: "icons/creatures/abilities/mouth-teeth-long-red.webp",
+        label: "Beast Bite",
+        origin: "Item.rauFpreQtKHaqkd7",
+        tint: "",
+        transfer: true,
+        flags: {
+          core: {
+            statusId: "",
+          },
+          dae: {
+            stackable: "none",
+            durationExpression: "",
+            macroRepeat: "none",
+            specialDuration: [],
+            transfer: true,
+          },
+          ActiveAuras: {
+            isAura: false,
+            aura: "None",
+            radius: null,
+            alignment: "",
+            type: "",
+            ignoreSelf: false,
+            height: false,
+            hidden: false,
+            displayTemp: false,
+            hostile: false,
+            onlyOnce: false,
+          },
+          "dnd5e-helpers": {
+            "rest-effect": "Ignore",
+          },
+        },
+        selectedKey: "flags.dnd5e.DamageBonusMacro",
+      },
+    ],
     flags: {
       favtab: {
         isFavorite: true,
       },
       midiProperties: {
         magicdam: `${mgcProp}`,
-      },
-      "midi-qol": {
-        onUseMacroName: "[postActiveEffects]ItemMacro",
       },
       itemacro: {
         macro: {
@@ -130,7 +177,7 @@ if (args[0] === "on") {
             img: "icons/svg/dice-target.svg",
             scope: "global",
             command:
-              'async function wait(ms) {\n  return new Promise((resolve) => {\n    setTimeout(resolve, ms);\n  });\n}\nconst lastArg = args[args.length - 1];\nif (lastArg.hitTargets.length === 0) return {};\nlet tokenD = canvas.tokens.get(lastArg.tokenId);\nlet target = canvas.tokens.get(lastArg.hitTargets[0].id);\nconst actorD = game.actors.get(lastArg.actor._id);\nlet itemD = await fromUuid(lastArg.itemUuid);\nlet gameRound = game.combat ? game.combat.round : 0;\nlet hpValue = actorD.data.data.attributes.hp.value;\nlet hpMax = actorD.data.data.attributes.hp.max;\nlet prof = actorD.data.data.attributes.prof;\nlet healType = "healing";\nlet damageType = "piercing";\nlet damageTotal = lastArg.damageDetail.find((i) => i.type === damageType);\nif (!damageTotal) return ui.notifications.error("Deal damage first");\nlet newHP;\nif (hpValue < Math.floor(hpMax / 2)) {\n  newHP = hpValue + prof;\n} else {\n\treturn;\n}\nawait actorD.update({\n\t"data.attributes.hp.value": Math.min(actorD.data.data.attributes.hp.max, newHP)\n})\n\n\nlet healMessage = `<div class="midi-qol-flex-container"><div class="midi-qol-target-npc midi-qol-target-name" id="${target.id}">hits ${target.name} </div><img src="${target.data.img}" width="30" height="30" style="border:0px"></div><div class="midi-qol-flex-container"><div class="midi-qol-target-npc midi-qol-target-name" id="${tokenD.id}">heals ${tokenD.name} <span style="color:green">+${prof}</span></div><img src="${tokenD.data.img}" width="30" height="30" style="border:0px"></div>`;\n//await wait(400);\nlet chatMessage = await game.messages.get(args[0].itemCardId);\nlet content = await duplicate(chatMessage.data.content);\nlet searchString = /<div class="midi-qol-hits-display">[\\s\\S]*<div class="end-midi-qol-hits-display">/g;\nlet replaceString = `<div class="midi-qol-hits-display"><div class="end-midi-qol-hits-display">${healMessage}`;\ncontent = await content.replace(searchString, replaceString);\nawait chatMessage.update({ content: content });',
+              '/*****\nForm of the Beast: Bite\n\nUSEAGE : AUTOMATED\nThis item should be placed on the character that has Psionic Power: Psychic Whispers\n\nYour mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.\n\nv0.1 April 25 2022 jbowens #0415 (Discord) https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats.git\n*****/\n// who\'s who?\nconst thisItem = await fromUuid(args[0].itemUuid);\nconst pcToken = token;\nconst pcActor = token.actor;\n\n// check character current hp > 1/2 max hp return\nconst halfHP = actor.data.data.attributes.hp.max / 2;\nconst currentHP = actor.data.data.attributes.hp.value;\n\nif (currentHP >= halfHP) return;\n\n// test and set combat flag for use once per round if in combat\nif (game.combat) {\n  const combatTime = `${game.combat.id}-${\n    game.combat.round + game.combat.turn / 100\n  }`;\n\n  console.log("combatTime:", combatTime);\n\n  const lastTime = actor.getFlag("midi-qol", "beastBite");\n  if (combatTime === lastTime) return;\n  // already used Beast Bite this round return\n  else await actor.setFlag("midi-qol", "beastBite", combatTime);\n}\n\n// get character proficiency bonus and heal that amount\nconst healAmount = actor.data.data.attributes.prof;\nawait MidiQOL.applyTokenDamage(\n  [{ damage: healAmount, type: "healing" }],\n  healAmount,\n  new Set([pcToken]),\n  thisItem,\n  new Set()\n);\n\nreturn;',
             folder: null,
             sort: 0,
             permission: {
@@ -139,6 +186,9 @@ if (args[0] === "on") {
             flags: {},
           },
         },
+      },
+      core: {
+        sourceId: "Item.rauFpreQtKHaqkd7",
       },
     },
   };
