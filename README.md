@@ -35,4 +35,4 @@ The `rage_beast.js` macro is included for reference only. It's already embedded 
 
 ## Many thanks!
 
-Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs.
+Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs. And a very special thanks to [jbowensii](https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats), who pretty much wrote the healing macro embedded in the bite item, completing this project. Thanks to everyone! 
