@@ -4,8 +4,12 @@ let tokenD;
 if (lastArg.tokenId) tokenD = canvas.tokens.get(lastArg.tokenId).actor;
 else tokenD = game.actors.get(lastArg.actorId);
 let item = args[1]; //passed by @item in the DAE field
-let level = tokenD.items.getName("Barbarian").data.data.levels;
-let subClass = tokenD.items.getName("Barbarian").data.data.subclass;
+let level = tokenD.data.data.classes.barbarian.levels;
+if (!level) {
+  ui.notifications.warn("You are not a barbarian!");
+  return;
+}
+let subClass = tokenD.data.data.classes.barbarian.subclass.identifier;
 let name = tokenD.data.token.name;
 let mod = tokenD.data.data.abilities.str.mod;
 let mgcProp = "";
@@ -364,7 +368,7 @@ if (args[0] === "on") {
   };
 
   // Check if correct subclass is in place
-  if (subClass == "Path of the Beast") {
+  if (subClass == "path-of-the-beast") {
     const buttonData = {
       buttons: [
         {
