@@ -4,12 +4,12 @@ let tokenD;
 if (lastArg.tokenId) tokenD = canvas.tokens.get(lastArg.tokenId).actor;
 else tokenD = game.actors.get(lastArg.actorId);
 let item = args[1]; //passed by @item in the DAE field
-let level = tokenD.data.data.classes.barbarian.levels;
+let level = tokenD.classes.barbarian.levels;
 if (!level) {
   ui.notifications.warn("You are not a barbarian!");
   return;
 }
-let subClass = tokenD.data.data.classes.barbarian.subclass.identifier;
+let subClass = tokenD.classes.barbarian.subclass.identifier;
 let name = tokenD.data.token.name;
 let mod = tokenD.data.data.abilities.str.mod;
 let mgcProp = "";
