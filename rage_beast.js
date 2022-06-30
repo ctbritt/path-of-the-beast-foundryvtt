@@ -3,13 +3,15 @@ const lastArg = args[args.length - 1];
 let tokenD;
 if (lastArg.tokenId) tokenD = canvas.tokens.get(lastArg.tokenId).actor;
 else tokenD = game.actors.get(lastArg.actorId);
+console.log("tokenD:", tokenD);
 let item = args[1]; //passed by @item in the DAE field
-let level = tokenD.classes.barbarian.levels;
+let level = tokenD.classes.barbarian.data.data.levels;
+console.log("level:", level);
 if (!level) {
   ui.notifications.warn("You are not a barbarian!");
   return;
 }
-let subClass = tokenD.classes.barbarian.subclass.identifier;
+let subClass = tokenD.classes.barbarian.data.data.subclass.identifier;
 let name = tokenD.data.token.name;
 let mod = tokenD.data.data.abilities.str.mod;
 let mgcProp = "";
@@ -181,7 +183,7 @@ if (args[0] === "on") {
             img: "icons/svg/dice-target.svg",
             scope: "global",
             command:
-              '/*****\nForm of the Beast: Bite\n\nUSEAGE : AUTOMATED\nThis item should be placed on the character that has Psionic Power: Psychic Whispers\n\nYour mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.\n\nv0.1 April 25 2022 jbowens #0415 (Discord) https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats.git\n*****/\n// who\'s who?\nconst thisItem = await fromUuid(args[0].itemUuid);\nconst pcToken = token;\nconst pcActor = token.actor;\n\n// check character current hp > 1/2 max hp return\nconst halfHP = actor.data.data.attributes.hp.max / 2;\nconst currentHP = actor.data.data.attributes.hp.value;\n\nif (currentHP >= halfHP) return;\n\n// test and set combat flag for use once per round if in combat\nif (game.combat) {\n  const combatTime = `${game.combat.id}-${\n    game.combat.round + game.combat.turn / 100\n  }`;\n\n  console.log("combatTime:", combatTime);\n\n  const lastTime = actor.getFlag("midi-qol", "beastBite");\n  if (combatTime === lastTime) return;\n  // already used Beast Bite this round return\n  else await actor.setFlag("midi-qol", "beastBite", combatTime);\n}\n\n// get character proficiency bonus and heal that amount\nconst healAmount = actor.data.data.attributes.prof;\nawait MidiQOL.applyTokenDamage(\n  [{ damage: healAmount, type: "healing" }],\n  healAmount,\n  new Set([pcToken]),\n  thisItem,\n  new Set()\n);\n\nreturn;',
+              '/*****\nForm of the Beast: Bite\n\nUSEAGE : AUTOMATED\nThis item should be placed on the character that has Psionic Power: Psychic Whispers\n\nYour mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.\n\nv0.1 April 25 2022 jbowens #0415 (Discord) https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats.git\n*****/\n// who\'s who?\nconst thisItem = await fromUuid(args[0].itemUuid);\nconst pcToken = token;\nconst pcActor = token.actor;\nif (thisItem.data.name !== "Form of the Beast: Bite") return;\n\n// check character current hp > 1/2 max hp return\nconst halfHP = actor.data.data.attributes.hp.max / 2;\nconst currentHP = actor.data.data.attributes.hp.value;\n\nif (currentHP >= halfHP) return;\n\n// test and set combat flag for use once per round if in combat\nif (game.combat) {\n  const combatTime = `${game.combat.id}-${\n    game.combat.round + game.combat.turn / 100\n  }`;\n\n  console.log("combatTime:", combatTime);\n\n  const lastTime = actor.getFlag("midi-qol", "beastBite");\n  if (combatTime === lastTime) return;\n  // already used Beast Bite this round return\n  else await actor.setFlag("midi-qol", "beastBite", combatTime);\n}\n\n// get character proficiency bonus and heal that amount\nconst healAmount = actor.data.data.attributes.prof;\nawait MidiQOL.applyTokenDamage(\n  [{ damage: healAmount, type: "healing" }],\n  healAmount,\n  new Set([pcToken]),\n  thisItem,\n  new Set()\n);\n\nreturn;',
             folder: null,
             sort: 0,
             permission: {
