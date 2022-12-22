@@ -2,97 +2,6 @@
   "name": "Rage",
   "type": "feat",
   "img": "icons/creatures/abilities/mouth-teeth-human.webp",
-  "data": {
-    "description": {
-      "value": "<p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:</p>\n<ul>\n<li>\n<p>You have advantage on Strength checks and Strength saving throws.</p>\n</li>\n<li>\n<p>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</p>\n</li>\n<li>\n<p>You have resistance to bludgeoning, piercing, and slashing damage.</p>\n</li>\n</ul>\n<p>If you are able to cast spells, you can't cast them or concentrate on them while raging. </p>\n<p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. </p>\n<p>Once you have raged the number of times shown for your barbarian level in the Rages column in the table below, you must finish a long rest before you can rage again.</p>\n<p><em style=\"box-sizing:border-box;user-select:text;color:#191813;font-size:13px\">**Foundry note: Note the limited uses is set to the base default of 2. Please manually adjust as required.</em></p>\n<table style=\"width:286px;height:170px\" border=\"1\">\n<tbody>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\"><strong>Barbarian Level</strong></td>\n<td style=\"width:68px;height:17px\"><strong>Rages</strong></td>\n<td style=\"width:96px;height:17px\"><strong>Rage Damage</strong></td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">1st</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">2nd</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">3rd</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">4th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">5th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">6th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">7th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">8th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">9th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">10th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">11th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">12th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">13th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">14th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">15th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">16th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">17th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">18th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">19th</td>\n<td style=\"width:68px;height:17px\">6</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">20th</td>\n<td style=\"width:68px;height:17px\">Unlimited</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n</tbody>\n</table>\n<p> </p>",
-      "chat": "",
-      "unidentified": ""
-    },
-    "source": "PHB pg. 48",
-    "activation": {
-      "type": "bonus",
-      "cost": 1,
-      "condition": ""
-    },
-    "duration": {
-      "value": 1,
-      "units": "minute"
-    },
-    "target": {
-      "value": null,
-      "width": null,
-      "units": "",
-      "type": "self"
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "self"
-    },
-    "uses": {
-      "value": 4,
-      "max": "4",
-      "per": "lr",
-      "type": "lr"
-    },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null
-    },
-    "ability": "",
-    "actionType": "other",
-    "attackBonus": 0,
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": null
-    },
-    "damage": {
-      "parts": [],
-      "versatile": "",
-      "value": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell",
-      "value": ""
-    },
-    "requirements": "Barbarian 1",
-    "recharge": {
-      "value": null,
-      "charged": false
-    },
-    "armor": {
-      "value": 10
-    },
-    "hp": {
-      "value": 0,
-      "max": 0,
-      "dt": null,
-      "conditions": ""
-    },
-    "properties": {
-      "amm": false,
-      "fin": false,
-      "fir": false,
-      "foc": false,
-      "hvy": false,
-      "lgt": false,
-      "lod": false,
-      "rch": false,
-      "rel": false,
-      "ret": false,
-      "spc": false,
-      "thr": false,
-      "two": false,
-      "ver": false
-    },
-    "price": null,
-    "attunement": 0
-  },
   "effects": [
     {
       "_id": "ob3w64kffx6zazhc",
@@ -101,49 +10,54 @@
           "key": "macro.itemMacro",
           "mode": 0,
           "value": "@item",
-          "priority": "20"
+          "priority": 20
         },
         {
-          "key": "data.bonuses.mwak.damage",
+          "key": "system.bonuses.mwak.damage",
           "mode": 2,
           "value": "((floor(abs((@classes.barbarian.levels)-2)/7))+2)",
-          "priority": "20"
+          "priority": 20
         },
         {
-          "key": "data.traits.dr.value",
+          "key": "system.traits.dr.value",
           "mode": 2,
           "value": "bludgeoning",
-          "priority": "20"
+          "priority": 20
         },
         {
-          "key": "data.traits.dr.value",
+          "key": "system.traits.dr.value",
           "mode": 2,
           "value": "piercing",
-          "priority": "20"
+          "priority": 20
         },
         {
-          "key": "data.traits.dr.value",
+          "key": "system.traits.dr.value",
           "mode": 2,
           "value": "slashing",
-          "priority": "20"
+          "priority": 20
         },
         {
           "key": "flags.midi-qol.advantage.ability.check.str",
           "mode": 0,
           "value": "1",
-          "priority": "20"
+          "priority": 20
         },
         {
           "key": "flags.midi-qol.advantage.ability.save.str",
           "mode": 0,
           "value": "1",
-          "priority": "20"
+          "priority": 20
         }
       ],
       "disabled": false,
       "duration": {
         "startTime": null,
-        "rounds": 10
+        "rounds": 10,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
       },
       "icon": "icons/creatures/abilities/mouth-teeth-human.webp",
       "label": "Rage",
@@ -177,15 +91,7 @@
         }
       },
       "tint": null,
-      "selectedKey": [
-        "macro.itemMacro",
-        "data.bonuses.mwak.damage",
-        "data.traits.dr.value",
-        "data.traits.dr.value",
-        "data.traits.dr.value",
-        "flags.midi-qol.advantage.ability.check.str",
-        "flags.midi-qol.advantage.ability.save.str"
-      ]
+      "origin": null
     }
   ],
   "flags": {
@@ -195,8 +101,8 @@
     "exportSource": {
       "world": "Rime-of-the-Frost-Maiden",
       "system": "dnd5e",
-      "coreVersion": "9.269",
-      "systemVersion": "1.6.0"
+      "coreVersion": "10.291",
+      "systemVersion": "2.0.3"
     },
     "magicitems": {
       "enabled": false,
@@ -228,6 +134,27 @@
             "default": 0
           },
           "flags": {}
+        },
+        "name": "Rage",
+        "type": "script",
+        "scope": "global",
+        "command": "// throat clearing to get data on token\nconst lastArg = args[args.length - 1];\nlet tokenD;\nif (lastArg.tokenId) tokenD = canvas.tokens.get(lastArg.tokenId).actor;\nelse tokenD = game.actors.get(lastArg.actorId);\nconsole.log(\"tokenD:\", tokenD);\nlet item = args[1]; //passed by @item in the DAE field\nconsole.log(\"item:\", item);\nlet level = tokenD.classes.barbarian.system.levels;\nconsole.log(\"level:\", level);\nif (!level) {\n  ui.notifications.warn(\"You are not a barbarian!\");\n  return;\n}\nlet subClass = tokenD.classes.barbarian.system.subclass.identifier;\nlet name = tokenD.data.prototypeToken.name;\nlet mod = tokenD.system.abilities.str.mod;\nlet mgcProp = \"\";\nif (level > 5) {\n  mgcProp = true;\n}\n\nconsole.log(\"tokenD: \", tokenD)\nconsole.log(\"item: \", item)\nconsole.log(\"level: \", level)\nconsole.log(\"subClass: \", subClass)\nconsole.log(\"name: \", name)\nconsole.log(\"mod: \", mod)\nconsole.log(\"mgcProp: \", mgcProp)\n\nif (args[0] === \"on\") {\n  // Mesages for when your barbarian gets angry. Feel free to customize.\n  let biteMsg = name + \" grows fierce, snarly teeth!\";\n  let clawMsg = name + \" grows sharp, slashing claws!\";\n  let tailMsg = name + \" grows a long, swinging tail!\";\n  let rageMsg = name + \" is ... RAGING!\";\n\n  // Define weapon if no weapon will be chosen later.\n  let weapon = \"\";\n\n  const animation = async () => {\n\tnew Sequence()\n\t  .effect()\n\t  .file(\"jb2a.markers.02.pink\") // patreon version\n\t  .atLocation(tokenD)\n\t  .duration(3000)\n\t  .fadeIn(500)\n\t  .fadeOut(500)\n\t  .scale(0.75)\n\t  .waitUntilFinished(-500)\n\n\t  .effect()\n\t  .file(\"jb2a.impact.purple.1\") // patreon version\n\t  .atLocation(tokenD)\n\t  .fadeIn(100)\n\t  .fadeOut(200)\n\t  .waitUntilFinished(-500)\n\t  .scale(0.75)\n\n\t  .effect()\n\t  .file(\"jb2a.impact.011.dark_purple\") // patreon version\n\t  .atLocation(tokenD)\n\t  .fadeIn(500)\n\t  .fadeOut(500)\n\t  .scale(0.75)\n\t  .waitUntilFinished(-500)\n\t  .play();\n  };\n\n  async function animationEnd() {\n\tSequencer.EffectManager.endEffects({\n\t  name: `${item.actor.data.name}- Rage -${token.data._id}`,\n\t}); //When we revert the mutation, we'll call this function to dismiss the animation\n  }\n\n  let mCallbacks = {\n\tpost: animation, //Straight after the mutation, we want to execute this animation function as a callback\n  };\n\n  function condition(eventData) {\n\tconsole.log(token.id, eventData.actorData.token);\n\tconsole.log(token.id === eventData.actorData.token._id);\n\treturn token.id === eventData.actorData.token._id; //This condition makes sure we have the correct token to revert the mutation from\n  }\n\n  // Define the weapons\n  let bite = {\n\tname: \"Form of the Beast: Bite\",\n\ttype: \"weapon\",\n\timg: \"icons/creatures/abilities/mouth-teeth-long-red.webp\",\n\tdata: {\n\t  description: {\n\t\tvalue:\n\t\t  \"<p><strong>Bite.</strong> Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 + 4 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have fewer than half your hit points when you hit.</p>\",\n\t  },\n\t  quantity: 1,\n\t  weight: 0,\n\t  price: 0,\n\t  attunement: 0,\n\t  equipped: true,\n\t  identified: true,\n\t  activation: {\n\t\ttype: \"action\",\n\t\tcost: 1,\n\t  },\n\t  target: {\n\t\tvalue: 1,\n\t\twidth: null,\n\t\tunits: \"\",\n\t\ttype: \"creature\",\n\t  },\n\t  range: {\n\t\tvalue: 5,\n\t\tlong: null,\n\t\tunits: \"ft\",\n\t  },\n\t  actionType: \"mwak\",\n\t  damage: {\n\t\tparts: [[\"1d8[piercing]+@mod\", \"piercing\"]],\n\t  },\n\t  weaponType: \"natural\",\n\t  properties: {\n\t\tmgc: `${mgcProp}`,\n\t  },\n\t  proficient: true,\n\t},\n\teffects: [\n\t  {\n\t\t_id: \"SwjTdomYq58tha05\",\n\t\tchanges: [\n\t\t  {\n\t\t\tkey: \"flags.dnd5e.DamageBonusMacro\",\n\t\t\tmode: 0,\n\t\t\tvalue: \"ItemMacro.Form of the Beast: Bite\",\n\t\t\tpriority: \"20\",\n\t\t  },\n\t\t],\n\t\tdisabled: false,\n\t\tduration: {\n\t\t  startTime: null,\n\t\t},\n\t\ticon: \"icons/creatures/abilities/mouth-teeth-long-red.webp\",\n\t\tlabel: \"Beast Bite\",\n\t\torigin: \"Item.rauFpreQtKHaqkd7\",\n\t\ttint: \"\",\n\t\ttransfer: true,\n\t\tflags: {\n\t\t  core: {\n\t\t\tstatusId: \"\",\n\t\t  },\n\t\t  dae: {\n\t\t\tstackable: \"none\",\n\t\t\tdurationExpression: \"\",\n\t\t\tmacroRepeat: \"none\",\n\t\t\tspecialDuration: [],\n\t\t\ttransfer: true,\n\t\t  },\n\t\t  ActiveAuras: {\n\t\t\tisAura: false,\n\t\t\taura: \"None\",\n\t\t\tradius: null,\n\t\t\talignment: \"\",\n\t\t\ttype: \"\",\n\t\t\tignoreSelf: false,\n\t\t\theight: false,\n\t\t\thidden: false,\n\t\t\tdisplayTemp: false,\n\t\t\thostile: false,\n\t\t\tonlyOnce: false,\n\t\t  },\n\t\t  \"dnd5e-helpers\": {\n\t\t\t\"rest-effect\": \"Ignore\",\n\t\t  },\n\t\t},\n\t\tselectedKey: \"flags.dnd5e.DamageBonusMacro\",\n\t  },\n\t],\n\tflags: {\n\t  favtab: {\n\t\tisFavorite: true,\n\t  },\n\t  midiProperties: {\n\t\tmagicdam: `${mgcProp}`,\n\t  },\n\t  itemacro: {\n\t\tmacro: {\n\t\t  data: {\n\t\t\t_id: null,\n\t\t\tname: \"Form of the Beast: Bite\",\n\t\t\ttype: \"script\",\n\t\t\tauthor: \"jM4h8qpyxwTpfNli\",\n\t\t\timg: \"icons/svg/dice-target.svg\",\n\t\t\tscope: \"global\",\n\t\t\tcommand:\n\t\t\t  '/*****\\nForm of the Beast: Bite\\n\\nUSEAGE : AUTOMATED\\nThis item should be placed on the character that has Psionic Power: Psychic Whispers\\n\\nYour mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.\\n\\nv0.1 April 25 2022 jbowens #0415 (Discord) https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats.git\\n*****/\\n// who\\'s who?\\nconst thisItem = await fromUuid(args[0].itemUuid);\\nconst pcToken = token;\\nconst pcActor = token.actor;\\n\\n// check character current hp > 1/2 max hp return\\nconst halfHP = actor.system.attributes.hp.max / 2;\\nconst currentHP = actor.system.attributes.hp.value;\\n\\nif (currentHP >= halfHP) return;\\n\\n// test and set combat flag for use once per round if in combat\\nif (game.combat) {\\n  const combatTime = `${game.combat.id}-${\\n    game.combat.round + game.combat.turn / 100\\n  }`;\\n\\n  console.log(\"combatTime:\", combatTime);\\n\\n  const lastTime = actor.getFlag(\"midi-qol\", \"beastBite\");\\n  if (combatTime === lastTime) return;\\n  // already used Beast Bite this round return\\n  else await actor.setFlag(\"midi-qol\", \"beastBite\", combatTime);\\n}\\n\\n// get character proficiency bonus and heal that amount\\nconst healAmount = actor.system.attributes.prof;\\nawait MidiQOL.applyTokenDamage(\\n  [{ damage: healAmount, type: \"healing\" }],\\n  healAmount,\\n  new Set([pcToken]),\\n  thisItem,\\n  new Set()\\n);\\n\\nreturn;',\n\t\t\tfolder: null,\n\t\t\tsort: 0,\n\t\t\tpermission: {\n\t\t\t  default: 0,\n\t\t\t},\n\t\t\tflags: {},\n\t\t  },\n\t\t},\n\t  },\n\t  core: {\n\t\tsourceId: \"Item.rauFpreQtKHaqkd7\",\n\t  },\n\t},\n  };\n  let claws = {\n\tname: \"Form of the Beast: Claws\",\n\ttype: \"weapon\",\n\timg: \"icons/commodities/claws/claws-white.webp\",\n\tdata: {\n\t  description: {\n\t\tvalue:\n\t\t  \"<p><strong>Claws.</strong> Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 + \" +\n\t\t  `${mod}` +\n\t\t  \" slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.</p>\",\n\t  },\n\t  quantity: 1,\n\t  weight: 0,\n\t  price: 0,\n\t  attunement: 0,\n\t  equipped: true,\n\t  identified: true,\n\t  activation: {\n\t\ttype: \"action\",\n\t\tcost: 1,\n\t  },\n\t  target: {\n\t\tvalue: 1,\n\t\ttype: \"creature\",\n\t  },\n\t  range: {\n\t\tvalue: 5,\n\t\tunits: \"ft\",\n\t  },\n\t  actionType: \"mwak\",\n\t  attackBonus: \"0\",\n\t  damage: {\n\t\tparts: [[\"1d6[slashing]+@mod\", \"slashing\"]],\n\t  },\n\t  weaponType: \"natural\",\n\t  properties: {\n\t\tmgc: `${mgcProp}`,\n\t  },\n\t  proficient: true,\n\t},\n\tflags: {\n\t  favtab: {\n\t\tisFavorite: true,\n\t  },\n\t  midiProperties: {\n\t\tmagicdam: `${mgcProp}`,\n\t  },\n\t},\n  };\n  let tail = {\n\tname: \"Form of the Beast: Tail\",\n\ttype: \"weapon\",\n\timg: \"icons/commodities/biological/tail-puff-grey.webp\",\n\tdata: {\n\t  description: {\n\t\tvalue:\n\t\t  \"<p><strong>Tail.</strong> You grow a lashing, spiny tail, which deals 1d8 + \" +\n\t\t  `${mod}` +\n\t\t  \" piercing damage on a hit and has the reach property.</p>\",\n\t  },\n\t  quantity: 1,\n\t  weight: 0,\n\t  price: 0,\n\t  attunement: 0,\n\t  equipped: true,\n\t  identified: true,\n\t  activation: {\n\t\ttype: \"action\",\n\t\tcost: 1,\n\t  },\n\t  target: {\n\t\tvalue: 1,\n\t\ttype: \"creature\",\n\t  },\n\t  range: {\n\t\tvalue: 10,\n\t\tunits: \"ft\",\n\t  },\n\t  actionType: \"mwak\",\n\t  attackBonus: \"0\",\n\t  damage: {\n\t\tparts: [[\"1d8[piercing]+@mod\", \"piercing\"]],\n\t  },\n\t  weaponType: \"natural\",\n\t  properties: {\n\t\tmgc: `${mgcProp}`,\n\t\trch: true,\n\t  },\n\t  proficient: true,\n\t},\n\tflags: {\n\t  favtab: {\n\t\tisFavorite: true,\n\t  },\n\t  midiProperties: {\n\t\tmagicdam: `${mgcProp}`,\n\t  },\n\t},\n  };\n  let tailSwipe = {\n\tname: \"Form of the Beast: Tail Swipe\",\n\ttype: \"weapon\",\n\timg: \"icons/commodities/biological/tail-puff-grey.webp\",\n\tdata: {\n\t  description: {\n\t\tvalue:\n\t\t  \"<p><strong>Tail Swipe.</strong>If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.</p>\",\n\t  },\n\t  quantity: 1,\n\t  weight: 0,\n\t  price: 0,\n\t  attunement: 0,\n\t  equipped: true,\n\t  identified: true,\n\t  activation: {\n\t\ttype: \"reaction\",\n\t\tcost: 1,\n\t  },\n\t  target: {\n\t\ttype: \"self\",\n\t  },\n\t  range: {\n\t\tunits: \"self\",\n\t  },\n\t  weaponType: \"natural\",\n\t  properties: {\n\t\tmgc: `${mgcProp}`,\n\t  },\n\t  proficient: true,\n\t},\n\teffects: [\n\t  {\n\t\tchanges: [\n\t\t  {\n\t\t\tkey: \"data.attributes.ac.bonus\",\n\t\t\tmode: 2,\n\t\t\tvalue: \"[[+1d8]]\",\n\t\t\tpriority: \"20\",\n\t\t  },\n\t\t],\n\t\ticon: \"systems/dnd5e/icons/items/inventory/monster-tail.jpg\",\n\t\tlabel: \"Form of the Beast: Tail Swipe\",\n\t\tflags: {\n\t\t  dae: {\n\t\t\tspecialDuration: [\"1Reaction\"],\n\t\t\ttransfer: false,\n\t\t\tstackable: \"none\",\n\t\t\tdurationExpression: \"\",\n\t\t\tmacroRepeat: \"none\",\n\t\t  },\n\t\t  \"dnd5e-helpers\": {\n\t\t\t\"rest-effect\": \"Ignore\",\n\t\t  },\n\t\t},\n\t\tselectedKey: \"data.attributes.ac.bonus\",\n\t\t_id: \"o5kga2qd35cjz78v\",\n\t\tdisabled: false,\n\t\tduration: {\n\t\t  startTime: null,\n\t\t},\n\t\ttransfer: false,\n\t\ttint: null,\n\t  },\n\t],\n\tflags: {\n\t  favtab: {\n\t\tisFavorite: true,\n\t  },\n\t},\n  };\n\n  // Check if correct subclass is in place\n  if (subClass == \"path-of-the-beast\") {\n\tconst buttonData = {\n\t  buttons: [\n\t\t{\n\t\t  label:\n\t\t\t\"<a title='Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.' alt='Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.'>Bite</a>\",\n\t\t  value: {\n\t\t\tmsg: biteMsg,\n\t\t\tupdate: {\n\t\t\t  embedded: {\n\t\t\t\tItem: {\n\t\t\t\t  [bite.name]: bite,\n\t\t\t\t},\n\t\t\t  },\n\t\t\t},\n\t\t  },\n\t\t},\n\t\t{\n\t\t  label:\n\t\t\t\"<a title='Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.' alt='Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.'>Claws</a>\",\n\t\t  value: {\n\t\t\tmsg: clawMsg,\n\t\t\tupdate: {\n\t\t\t  embedded: {\n\t\t\t\tItem: {\n\t\t\t\t  [claws.name]: claws,\n\t\t\t\t},\n\t\t\t  },\n\t\t\t},\n\t\t  },\n\t\t},\n\t\t{\n\t\t  label:\n\t\t\t\"<a title='You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.' alt='You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.'>Tail</a>\",\n\t\t  value: {\n\t\t\tmsg: tailMsg,\n\t\t\tupdate: {\n\t\t\t  embedded: {\n\t\t\t\tItem: {\n\t\t\t\t  [tail.name]: tail,\n\t\t\t\t  [tailSwipe.name]: tailSwipe,\n\t\t\t\t},\n\t\t\t  },\n\t\t\t},\n\t\t  },\n\t\t},\n\t  ],\n\t  title: \"Which Form of the Beast?\",\n\t  content: `<p><img src=\"https://www.dndbeyond.com/avatars/thumbnails/13710/613/420/618/637402706646069197.png\" height=\"100\" style=\"float:left;outline:0;border:0;vertical-align:middle;margin:0px 10px\">When you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.</p>\n\t<p>You choose the weapon’s form each time you rage:</p>`,\n\t};\n\tweapon = await warpgate.buttonDialog(buttonData);\n  }\n\n  const options = {\n\tcomparisonKeys: { ActiveEffect: \"label\" },\n\tname: \"Rage\", //Let's give the mutation a name so when we shift-click the revert button, we'll identify the right mutation to revert\n  };\n\n  // send fun message about weapons if available\n  if (weapon.msg) {\n\tui.notifications.info(weapon.msg);\n  } else {\n\tui.notifications.info(rageMsg);\n  }\n\n  // merge updates for spawning\n  let updates = weapon.update;\n  // let updates = mergeObject(rageAE, weapon.update); << old version\n\n  await warpgate.mutate(token.document, updates, mCallbacks, options); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).\n}\n\nif (args[0] === \"off\") {\n  warpgate.revert(token.document, \"Rage\");\n}",
+        "author": "jM4h8qpyxwTpfNli",
+        "_id": null,
+        "img": "icons/svg/dice-target.svg",
+        "folder": null,
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {},
+        "_stats": {
+          "systemId": null,
+          "systemVersion": null,
+          "coreVersion": null,
+          "createdTime": null,
+          "modifiedTime": null,
+          "lastModifiedBy": null
         }
       }
     },
@@ -276,34 +203,127 @@
       "magicdam": false,
       "magiceffect": false,
       "concentration": false,
-      "toggleEffect": false
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "autoFailFriendly": false,
+      "offHandWeapon": false
     },
-    "autoanimations": {
-      "version": 4,
-      "killAnim": true,
-      "animLevel": false,
-      "options": {
-        "ammo": false
-      },
-      "override": false,
-      "sourceToken": {
-        "enable": false
-      },
-      "targetToken": {
-        "enable": false
-      },
-      "levels3d": {
-        "type": ""
-      },
-      "macro": {
-        "enable": false
-      },
-      "audio": {
-        "a01": {
-          "enable": false
+    "gm-notes": {},
+    "rest-recovery": {
+      "data": {
+        "recovery": {
+          "enabled": false
         }
       }
     },
-    "gm-notes": {}
+    "scene-packer": {
+      "hash": "e67cec41434be983ee5635abbcf5af236d51ab57"
+    },
+    "autoanimations": {
+      "isEnabled": false,
+      "isCustomized": false,
+      "fromAmmo": false,
+      "version": 5
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:</p>\n<ul>\n<li>\n<p>You have advantage on Strength checks and Strength saving throws.</p>\n</li>\n<li>\n<p>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</p>\n</li>\n<li>\n<p>You have resistance to bludgeoning, piercing, and slashing damage.</p>\n</li>\n</ul>\n<p>If you are able to cast spells, you can't cast them or concentrate on them while raging. </p>\n<p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. </p>\n<p>Once you have raged the number of times shown for your barbarian level in the Rages column in the table below, you must finish a long rest before you can rage again.</p>\n<p><em style=\"box-sizing:border-box;user-select:text;color:#191813;font-size:13px\">**Foundry note: Note the limited uses is set to the base default of 2. Please manually adjust as required.</em></p>\n<table style=\"width:286px;height:170px\" border=\"1\">\n<tbody>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\"><strong>Barbarian Level</strong></td>\n<td style=\"width:68px;height:17px\"><strong>Rages</strong></td>\n<td style=\"width:96px;height:17px\"><strong>Rage Damage</strong></td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">1st</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">2nd</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">3rd</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">4th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">5th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">6th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">7th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">8th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">9th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">10th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">11th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">12th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">13th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">14th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">15th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">16th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">17th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">18th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">19th</td>\n<td style=\"width:68px;height:17px\">6</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">20th</td>\n<td style=\"width:68px;height:17px\">Unlimited</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n</tbody>\n</table>\n<p> </p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "PHB pg. 48",
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": 1,
+      "units": "minute"
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 4,
+      "max": "4",
+      "per": "lr",
+      "recovery": "",
+      "type": "lr"
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "",
+    "actionType": "other",
+    "attackBonus": 0,
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": null
+    },
+    "damage": {
+      "parts": [],
+      "versatile": "",
+      "value": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell",
+      "value": ""
+    },
+    "requirements": "Barbarian 1 - Path of the Beast",
+    "recharge": {
+      "value": null,
+      "charged": false
+    },
+    "armor": {
+      "value": 10
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": {
+      "amm": false,
+      "fin": false,
+      "fir": false,
+      "foc": false,
+      "hvy": false,
+      "lgt": false,
+      "lod": false,
+      "rch": false,
+      "rel": false,
+      "ret": false,
+      "spc": false,
+      "thr": false,
+      "two": false,
+      "ver": false
+    },
+    "price": null,
+    "attunement": 0
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.0.3",
+    "coreVersion": "10.291",
+    "createdTime": 1667768343480,
+    "modifiedTime": 1671747657530,
+    "lastModifiedBy": "jM4h8qpyxwTpfNli"
   }
 }
