@@ -255,7 +255,7 @@
     },
     "uses": {
       "value": 4,
-      "max": "4",
+      "max": "@scale.barbarian.rages",
       "per": "lr",
       "recovery": "",
       "type": "lr"
@@ -323,7 +323,7 @@
     "systemVersion": "2.0.3",
     "coreVersion": "10.291",
     "createdTime": 1667768343480,
-    "modifiedTime": 1671747657530,
+    "modifiedTime": 1671748090891,
     "lastModifiedBy": "jM4h8qpyxwTpfNli"
   }
 }
