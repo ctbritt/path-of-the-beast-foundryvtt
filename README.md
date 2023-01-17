@@ -18,10 +18,11 @@ Requires
 ## Usage instructions
 
 1. Download the Rage.json item
-2. Create an item in your items directory. You can name it whatever you want.
-3. Right-click on the item you just created and choose `Import Data`.
-4. Select the downloaded rage.json item from where you downloaded it.
-5. Drag the new Rage item onto your Path of the Beast Barbarian and kick ass.
+2. Add a rage damage scale on your Barbarian class advancement sheet. Use `@scale.barbarian.rage-damage` for the identifier.
+3. Create an item in your items directory. You can name it whatever you want.
+4. Right-click on the item you just created and choose `Import Data`.
+5. Select the downloaded rage.json item from where you downloaded it.
+6. Drag the new Rage item onto your Path of the Beast Barbarian and kick ass.
 
 That's it! Now, when you rage, you will get the basic rage effects and, assuming your barbarian follows the Path of the Beast, you will get a popup dialog asking which kind of weapon you wish to manifest. If you don't want to manifest a weapon, just close the dialog window without choosing one. The basic rage effects will be applied but no weapon will be generated.
 
@@ -35,4 +36,4 @@ The `rage_beast.js` macro is included for reference only. It's already embedded 
 
 ## Many thanks!
 
-Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs. And a very special thanks to [jbowensii](https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats), who pretty much wrote the healing macro embedded in the bite item, completing this project. Thanks to everyone! 
+Thanks to [honeybadger](https://github.com/trioderegion/warpgate) for much patient hand-holding and for writing Warpgate, as well as to [gazkhan](https://github.com/Gazkhan) for their original rage macro that inspired me to expand on this. The animation and basic structure is theirs. And a very special thanks to [jbowensii](https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats), who pretty much wrote the healing macro embedded in the bite item, completing this project. Thanks to everyone!
