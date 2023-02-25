@@ -1,85 +1,32 @@
 // throat clearing to get data on token
 const lastArg = args[ args.length - 1 ];
-let tokenD;
-if ( lastArg.tokenId ) tokenD = canvas.tokens.get( lastArg.tokenId ).actor;
-else tokenD = game.actors.get( lastArg.actorId );
-console.log( "tokenD:", tokenD );
-let item = args[ 1 ]; //passed by @item in the DAE field
-console.log( "item:", item );
-let level = tokenD.classes.barbarian.system.levels;
-console.log( "level:", level );
+const { tokenId, actorId } = lastArg;
+let tokenD = tokenId ? canvas.tokens.get( tokenId ).actor : game.actors.get( actorId );
+const item = args[ 1 ]; //passed by @item in the DAE field
+const level = tokenD.classes.barbarian.system.levels;
 if ( !level ) {
 	ui.notifications.warn( "You are not a barbarian!" );
 	return;
 }
-let subClass = tokenD.classes.barbarian.subclass.system.identifier;
-let name = tokenD.prototypeToken._source.name;
-let mod = tokenD.system.abilities.str.mod;
+const subClass = tokenD.classes.barbarian.subclass.system.identifier;
+const name = tokenD.prototypeToken._source.name;
+const mod = tokenD.system.abilities.str.mod;
 let mgcProp = "";
 if ( level > 5 ) {
 	mgcProp = true;
 }
 
-console.log( "tokenD: ", tokenD )
-console.log( "item: ", item )
-console.log( "level: ", level )
-console.log( "subClass: ", subClass )
-console.log( "name: ", name )
-console.log( "mod: ", mod )
-console.log( "mgcProp: ", mgcProp )
 
 if ( args[ 0 ] === "on" ) {
-	// Mesages for when your barbarian gets angry. Feel free to customize.
-	let biteMsg = name + " grows fierce, snarly teeth!";
-	let clawMsg = name + " grows sharp, slashing claws!";
-	let tailMsg = name + " grows a long, swinging tail!";
-	let rageMsg = name + " is ... RAGING!";
+	let biteMsg = `${name} grows fierce, snarly teeth!`;
+	let clawMsg = `${name} grows sharp, slashing claws!`;
+	let tailMsg = `${name} grows a long, swinging tail!`;
+	let rageMsg = `${name} is ... RAGING!`;
 
 	// Define weapon if no weapon will be chosen later.
 	let weapon = "";
 
-	const animation = async ( ) => {
-		new Sequence( )
-			.effect( )
-			.file( "jb2a.markers.02.pink" ) // patreon version
-			.atLocation( tokenD )
-			.duration( 3000 )
-			.fadeIn( 500 )
-			.fadeOut( 500 )
-			.scale( 0.75 )
-			.waitUntilFinished( -500 )
-
-			.effect( )
-			.file( "jb2a.impact.purple.1" ) // patreon version
-			.atLocation( tokenD )
-			.fadeIn( 100 )
-			.fadeOut( 200 )
-			.waitUntilFinished( -500 )
-			.scale( 0.75 )
-
-			.effect( )
-			.file( "jb2a.impact.011.dark_purple" ) // patreon version
-			.atLocation( tokenD )
-			.fadeIn( 500 )
-			.fadeOut( 500 )
-			.scale( 0.75 )
-			.waitUntilFinished( -500 )
-			.play( );
-	};
-
-	async function animationEnd( ) {
-		Sequencer.EffectManager.endEffects( {
-			name: `${item.actor.data.name}- Rage -${token.data._id}`,
-		} ); //When we revert the mutation, we'll call this function to dismiss the animation
-	}
-
-	let mCallbacks = {
-		post: animation, //Straight after the mutation, we want to execute this animation function as a callback
-	};
-
 	function condition( eventData ) {
-		console.log( token.id, eventData.actorData.token );
-		console.log( token.id === eventData.actorData.token._id );
 		return token.id === eventData.actorData.token._id; //This condition makes sure we have the correct token to revert the mutation from
 	}
 
@@ -101,6 +48,9 @@ if ( args[ 0 ] === "on" ) {
 			"origin": "Item.rauFpreQtKHaqkd7",
 			"transfer": true,
 			"flags": {
+				"favtab": {
+					"isFavorite": true
+				},
 				"dae": {
 					"stackable": "none",
 					"durationExpression": "",
@@ -114,6 +64,9 @@ if ( args[ 0 ] === "on" ) {
 		flags: {
 			favtab: {
 				isFavorite: true,
+			},
+			"tidy5e-sheet": {
+				favorite: true
 			},
 			midiProperties: {
 				magicdam: `${mgcProp}`,
@@ -227,6 +180,9 @@ if ( args[ 0 ] === "on" ) {
 			favtab: {
 				isFavorite: true,
 			},
+			"tidy5e-sheet": {
+				favorite: true
+			},
 			midiProperties: {
 				magicdam: `${mgcProp}`,
 			},
@@ -279,6 +235,9 @@ if ( args[ 0 ] === "on" ) {
 			favtab: {
 				isFavorite: true,
 			},
+			"tidy5e-sheet": {
+				favorite: true
+			},
 			midiProperties: {
 				magicdam: `${mgcProp}`,
 			},
@@ -315,6 +274,9 @@ if ( args[ 0 ] === "on" ) {
 			favtab: {
 				isFavorite: true,
 			},
+			"tidy5e-sheet": {
+				favorite: true
+			}
 		},
 		system: {
 			"description": {
@@ -410,9 +372,9 @@ if ( args[ 0 ] === "on" ) {
 
 	// merge updates for spawning
 	let updates = weapon.update;
-	// let updates = mergeObject(rageAE, weapon.update); << old version
 
-	await warpgate.mutate( token.document, updates, mCallbacks, options ); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
+
+	await warpgate.mutate( token.document, updates, {}, options ); //Let's mutate the token document with some updates(stats changes and active effect on), callbacks(animation function) and options(name).
 }
 
 if ( args[ 0 ] === "off" ) {
