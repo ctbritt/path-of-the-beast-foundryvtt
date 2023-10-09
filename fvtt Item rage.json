@@ -1,0 +1,405 @@
+{
+  "name": "Rage",
+  "type": "feat",
+  "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "infusions": {
+      "infused": false
+    },
+    "obsidian": {
+      "source": {
+        "type": "class",
+        "text": "Barbarian"
+      }
+    },
+    "link-item-resource-5e": {
+      "resource-link": "primary"
+    },
+    "midi-qol": {
+      "forceCEOff": true,
+      "effectActivation": false,
+      "forceCEOn": false,
+      "onUseMacroName": "[postActiveEffects]ItemMacro"
+    },
+    "custom-character-sheet-sections": {
+      "sectionName": ""
+    },
+    "rest-recovery": {
+      "data": {
+        "recovery": {
+          "enabled": false
+        }
+      }
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "rollOther": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "grpact": false
+    },
+    "core": {},
+    "cf": {
+      "id": "temp_u5fwik2ytfs"
+    },
+    "chris-premades": {
+      "info": {
+        "name": "Rage",
+        "version": "0.7.31",
+        "mutation": {
+          "self": "Rage"
+        }
+      }
+    },
+    "tidy5e-sheet": {
+      "favorite": true
+    },
+    "autoanimations": {
+      "id": "1d5a65e3-ef4c-4714-9df0-b876d1083d72",
+      "label": "Rage",
+      "levels3d": {
+        "type": "explosion",
+        "data": {
+          "color01": "#FFFFFF",
+          "color02": "#FFFFFF",
+          "spritePath": "modules/levels-3d-preview/assets/particles/dust.png"
+        },
+        "sound": {
+          "enable": false
+        },
+        "secondary": {
+          "enable": false,
+          "data": {
+            "color01": "#FFFFFF",
+            "color02": "#FFFFFF",
+            "spritePath": "modules/levels-3d-preview/assets/particles/dust.png"
+          }
+        }
+      },
+      "macro": {
+        "enable": false
+      },
+      "meleeSwitch": {
+        "video": {
+          "dbSection": "range",
+          "menuType": "weapon",
+          "animation": "arrow",
+          "variant": "regular",
+          "color": "regular"
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "detect": "automatic",
+          "range": 2,
+          "returning": false,
+          "switchType": "on"
+        }
+      },
+      "menu": "melee",
+      "primary": {
+        "video": {
+          "dbSection": "melee",
+          "menuType": "weapon",
+          "animation": "club",
+          "variant": "01",
+          "color": "white",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "isWait": false,
+          "opacity": 1,
+          "playbackRate": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "secondary": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": true,
+          "isWait": false,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1.5,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "soundOnly": {
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        }
+      },
+      "source": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "isWait": true,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "target": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "opacity": 1,
+          "persistent": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "unbindAlpha": false,
+          "unbindVisibility": false,
+          "zIndex": 1
+        }
+      },
+      "isEnabled": false,
+      "isCustomized": false,
+      "fromAmmo": false,
+      "version": 5
+    },
+    "dicerecharge": {
+      "special": {
+        "active": false
+      },
+      "destroy": {
+        "check": false
+      }
+    },
+    "itemacro": {
+      "macro": {
+        "name": "Rage",
+        "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+        "type": "script",
+        "scope": "global",
+        "command": "if (!workflow.actor || !workflow.token) return;\nlet effect = chrisPremades.helpers.findEffect(workflow.actor, \"Concentrating\");\nif (effect) chrisPremades.helpers.removeEffect(effect);\nlet featureData = await chrisPremades.helpers.getItemFromCompendium(\n  \"chris-premades.CPR Class Feature Items\",\n  \"Rage - End\",\n  false\n);\nif (!featureData) return;\nfeatureData.system.description.value = chrisPremades.helpers.getItemDescription(\n  \"CPR - Descriptions\",\n  \"Rage - End\"\n);\nasync function effectMacro() {\n  await warpgate.revert(token.document, \"Rage\");\n  await Sequencer.EffectManager.endEffects({ name: \"Rage\", object: token });\n  new Sequence()\n    .animation()\n    .on(token)\n    .opacity(1)\n\n    .play();\n}\nasync function effectMacro2() {\n  await chrisPremades.macros.rage.animationStart(token, origin);\n}\nlet effectData = {\n  changes: [\n    {\n      key: \"flags.midi-qol.advantage.ability.check.str\",\n      mode: 0,\n      value: \"1\",\n      priority: 0,\n    },\n    {\n      key: \"flags.midi-qol.advantage.ability.save.str\",\n      mode: 0,\n      value: \"1\",\n      priority: 0,\n    },\n    {\n      key: \"system.traits.dr.value\",\n      mode: 0,\n      value: \"slashing\",\n      priority: 20,\n    },\n    {\n      key: \"system.traits.dr.value\",\n      mode: 0,\n      value: \"piercing\",\n      priority: 20,\n    },\n    {\n      key: \"system.traits.dr.value\",\n      mode: 0,\n      value: \"bludgeoning\",\n      priority: 20,\n    },\n    {\n      key: \"system.bonuses.mwak.damage\",\n      mode: 2,\n      value: \"+ @scale.barbarian.rage-damage\",\n      priority: 20,\n    },\n    {\n      key: \"flags.midi-qol.fail.spell.vocal\",\n      value: \"1\",\n      mode: 0,\n      priority: 20,\n    },\n    {\n      key: \"flags.midi-qol.fail.spell.somatic\",\n      value: \"1\",\n      mode: 0,\n      priority: 20,\n    },\n    {\n      key: \"flags.midi-qol.fail.spell.material\",\n      value: \"1\",\n      mode: 0,\n      priority: 20,\n    },\n  ],\n  duration: {\n    seconds: 60,\n  },\n  icon: workflow.item.img,\n  label: workflow.item.name,\n  origin: workflow.item.uuid,\n  flags: {\n    effectmacro: {\n      onDelete: {\n        script: chrisPremades.helpers.functionToString(effectMacro),\n      },\n      onCreate: {\n        script: chrisPremades.helpers.functionToString(effectMacro2),\n      },\n    },\n    \"chris-premades\": {\n      vae: {\n        button: featureData.name,\n      },\n    },\n  },\n};\n// Define weapon if no weapon will be chosen later.\nlet weapon = \"\";\nconst barbarianClass = actor.classes?.barbarian;\nif (!barbarianClass) {\n  ui.notifications.warn(\"You are not a barbarian!\");\n  return;\n}\nconst subClass = barbarianClass.subclass.name;\nconst level = barbarianClass.system.levels;\nlet mgcProp = level > 5 ? true : false;\n\n// Define the weapons\nlet bite = {\n  name: \"Form of the Beast: Bite\",\n  type: \"weapon\",\n  img: \"icons/creatures/abilities/mouth-teeth-long-red.webp\",\n  effects: [\n    {\n      _id: \"SwjTdomYq58tha05\",\n      changes: [\n        {\n          key: \"flags.dnd5e.DamageBonusMacro\",\n          mode: 0,\n          value: \"ItemMacro.Form of the Beast: Bite\",\n          priority: 20,\n        },\n      ],\n      icon: \"icons/creatures/abilities/mouth-teeth-long-red.webp\",\n      label: \"Beast Bite\",\n      origin: \"Item.rauFpreQtKHaqkd7\",\n      transfer: true,\n    },\n  ],\n\n  flags: {\n    \"custom-character-sheet-sections\": {\n      sectionName: \"Rage\",\n    },\n    favtab: {\n      isFavorite: true,\n    },\n    \"tidy5e-sheet\": {\n      favorite: true,\n    },\n    midiProperties: {\n      magicdam: `${mgcProp}`,\n    },\n    itemacro: {\n      macro: {\n        data: {\n          _id: null,\n          name: \"Form of the Beast: Bite\",\n          type: \"script\",\n          author: \"jM4h8qpyxwTpfNli\",\n          img: \"icons/svg/dice-target.svg\",\n          scope: \"global\",\n          command:\n            '/*****\\nForm of the Beast: Bite\\n\\nUSEAGE : AUTOMATED\\nThis item should be placed on the character that has Psionic Power: Psychic Whispers\\n\\nYour mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.\\n\\nv0.1 April 25 2022 jbowens #0415 (Discord) https://github.com/jbowensii/More-Automated-Spells-Items-and-Feats.git\\n*****/\\n// did it hit?\\nif (workflow.hitTargets.size < 1) return;\\n// who\\'s who?\\nconst thisItem = await fromUuid(args[0].itemUuid);\\nconst pcToken = token;\\nconst pcActor = token.actor;\\n\\n// check character current hp > 1/2 max hp return\\nconst halfHP = actor.system.attributes.hp.max / 2;\\nconst currentHP = actor.system.attributes.hp.value;\\n\\nif (currentHP >= halfHP) return;\\n\\n// test and set combat flag for use once per round if in combat\\nif (game.combat) {\\n  const combatTime = `${game.combat.id}-${\\n    game.combat.round + game.combat.turn / 100\\n  }`;\\n\\n  console.log(\"combatTime:\", combatTime);\\n\\n  const lastTime = actor.getFlag(\"midi-qol\", \"beastBite\");\\n  if (combatTime === lastTime) return;\\n  // already used Beast Bite this round return\\n  else await actor.setFlag(\"midi-qol\", \"beastBite\", combatTime);\\n}\\n\\n// get character proficiency bonus and heal that amount\\nconst healAmount = actor.system.attributes.prof;\\nawait MidiQOL.applyTokenDamage(\\n  [{ damage: healAmount, type: \"healing\" }],\\n  healAmount,\\n  new Set([pcToken]),\\n  thisItem,\\n  new Set()\\n);\\n\\nreturn;',\n          folder: null,\n          sort: 0,\n          permission: {\n            default: 0,\n          },\n          flags: {},\n        },\n      },\n    },\n    core: {\n      sourceId: \"Item.rauFpreQtKHaqkd7\",\n    },\n    \"midi-qol\": {\n      fumbleThreshold: null,\n      effectActivation: false,\n      onUseMacroName: \"\",\n    },\n  },\n  system: {\n    description: {\n      \"value\": \"<p><strong>Bite.</strong> Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 + [[@abilities.str.mod]] piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have fewer than half your hit points when you hit.</p>\",\n    },\n    quantity: 1,\n    equipped: true,\n    identified: true,\n    activation: {\n      type: \"action\",\n      cost: 1,\n      condition: \"\",\n    },\n    target: {\n      value: 1,\n      width: null,\n      units: \"\",\n      type: \"creature\",\n    },\n    range: {\n      value: 5,\n      long: null,\n      units: \"ft\",\n    },\n    actionType: \"mwak\",\n    damage: {\n      parts: [[\"1d8+@mod\", \"piercing\"]],\n      versatile: \"\",\n    },\n    weaponType: \"natural\",\n    proficient: true,\n    properties: {\n      mgc: mgcProp,\n    },\n  },\n};\nlet claws = {\n  name: \"Form of the Beast: Claws\",\n  type: \"weapon\",\n  img: \"icons/commodities/claws/claws-white.webp\",\n  system: {\n    description: {\n      \"value\": \"<p><strong>Claws.</strong> Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 + [[@abilities.str.mod]] slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.</p><p></p>\",\n    },\n    quantity: 1,\n    equipped: true,\n    identified: true,\n    activation: {\n      type: \"action\",\n      cost: 1,\n      condition: \"\",\n    },\n    target: {\n      value: 1,\n      width: null,\n      units: \"\",\n      type: \"creature\",\n    },\n    range: {\n      value: 5,\n      long: null,\n      units: \"ft\",\n    },\n    actionType: \"mwak\",\n    damage: {\n      parts: [[\"1d6+@mod\", \"slashing\"]],\n      versatile: \"\",\n    },\n    weaponType: \"natural\",\n    proficient: true,\n    properties: {\n      mgc: mgcProp,\n    },\n  },\n  flags: {\n    \"custom-character-sheet-sections\": {\n      sectionName: \"Rage\",\n    },\n    favtab: {\n      isFavorite: true,\n    },\n    \"tidy5e-sheet\": {\n      favorite: true,\n    },\n    midiProperties: {\n      magicdam: `${mgcProp}`,\n    },\n  },\n};\nlet tail = {\n  name: \"Form of the Beast: Tail\",\n  type: \"weapon\",\n  img: \"icons/commodities/biological/tail-puff-grey.webp\",\n  system: {\n    description: {\n      \"value\": \"<p><strong>Tail.</strong> You grow a lashing, spiny tail, which deals 1d8 + [[@abilities.str.mod]]  piercing damage on a hit and has the reach property.</p>\",\n      chat: \"\",\n      unidentified: \"\",\n    },\n    quantity: 1,\n    equipped: true,\n    identified: true,\n    activation: {\n      type: \"action\",\n      cost: 1,\n      condition: \"\",\n    },\n    target: {\n      value: 1,\n      width: null,\n      units: \"\",\n      type: \"creature\",\n    },\n    range: {\n      value: 10,\n      long: null,\n      units: \"ft\",\n    },\n    actionType: \"mwak\",\n    damage: {\n      parts: [[\"1d8+@mod\", \"piercing\"]],\n      versatile: \"\",\n    },\n    weaponType: \"natural\",\n    baseItem: \"\",\n    proficient: true,\n    properties: {\n      mgc: mgcProp,\n    },\n  },\n  flags: {\n    \"custom-character-sheet-sections\": {\n      sectionName: \"Rage\",\n    },\n\n    favtab: {\n      isFavorite: true,\n    },\n    \"tidy5e-sheet\": {\n      favorite: true,\n    },\n    midiProperties: {\n      magicdam: `${mgcProp}`,\n    },\n  },\n};\nlet tailSwipe = {\n  name: \"Form of the Beast: Tail Swipe\",\n  type: \"weapon\",\n  img: \"icons/commodities/biological/tail-puff-grey.webp\",\n  effects: [\n    {\n      changes: [\n        {\n          key: \"system.attributes.ac.bonus\",\n          mode: 2,\n          value: \"[[+1d8]]\",\n          priority: 20,\n        },\n      ],\n      icon: \"icons/commodities/biological/tail-puff-grey.webp\",\n      label: \"Form of the Beast: Tail Swipe\",\n      flags: {\n        dae: {\n          specialDuration: [\"1Reaction\"],\n          transfer: false,\n          stackable: \"none\",\n          durationExpression: \"\",\n          macroRepeat: \"none\",\n          selfTarget: false,\n          selfTargetAlways: false,\n        },\n      },\n      _id: \"o5kga2qd35cjz78v\",\n      transfer: false,\n    },\n  ],\n  flags: {\n    \"custom-character-sheet-sections\": {\n      sectionName: \"Rage\",\n    },\n\n    favtab: {\n      isFavorite: true,\n    },\n    \"tidy5e-sheet\": {\n      favorite: true,\n    },\n  },\n  system: {\n    description: {\n      \"value\": \"<p><strong>Tail Swipe.</strong> If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll [[/r 1d8]], applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.</p>\",\n    },\n    quantity: 1,\n    equipped: true,\n    identified: true,\n    activation: {\n      type: \"reaction\",\n      cost: 1,\n      condition: \"\",\n    },\n    target: {\n      value: null,\n      width: null,\n      units: \"\",\n      type: \"self\",\n    },\n    range: {\n      value: null,\n      long: null,\n      units: \"self\",\n    },\n    actionType: \"other\",\n    weaponType: \"natural\",\n    proficient: true,\n    properties: {\n      mgc: mgcProp,\n    },\n  },\n};\n\n// Check if correct subclass is in place\nif (subClass === \"Path of the Beast\") {\n  const buttonData = {\n    buttons: [\n      {\n        label:\n          \"<a title='Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.' alt='Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.'>Bite</a>\",\n        value: bite,\n      },\n      {\n        label:\n          \"<a title='Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.' alt='Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.'>Claws</a>\",\n        value: claws,\n      },\n      {\n        label:\n          \"<a title='You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.' alt='You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.'>Tail</a>\",\n        value: [tail, tailSwipe],\n      },\n    ],\n    title: \"Which Form of the Beast?\",\n    content: `<p><img src=\"https://www.dndbeyond.com/avatars/thumbnails/13710/613/420/618/637402706646069197.png\" height=\"100\" style=\"float:left;outline:0;border:0;vertical-align:middle;margin:0px 10px\">When you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.</p>\n\t<p>You choose the weapon’s form each time you rage:</p>`,\n  };\n  weapon = await warpgate.buttonDialog(buttonData);\n}\nconsole.log(\"weapon:\", weapon);\n\nif (Array.isArray(weapon)) {\n  let [weapon1, weapon2] = weapon;\n  updates = {\n    embedded: {\n      Item: {\n        [featureData.name]: featureData,\n        [weapon1.name]: weapon1,\n        [weapon2.name]: weapon2,\n      },\n      ActiveEffect: {\n        [effectData.label]: effectData,\n      },\n    },\n  };\n} else if (!weapon) {\n  updates = {\n    embedded: {\n      Item: {\n        [featureData.name]: featureData,\n      },\n      ActiveEffect: {\n        [effectData.label]: effectData,\n      },\n    },\n  };\n} else {\n  updates = {\n    embedded: {\n      Item: {\n        [featureData.name]: featureData,\n        [weapon.name]: weapon,\n      },\n      ActiveEffect: {\n        [effectData.label]: effectData,\n      },\n    },\n  };\n}\n\nlet options = {\n  permanent: false,\n  name: \"Rage\",\n  description: featureData.name,\n};\nawait warpgate.mutate(workflow.token.document, updates, {}, options);\nasync function end({\n  speaker,\n  actor,\n  token,\n  character,\n  item,\n  args,\n  scope,\n  workflow,\n}) {\n  if (!workflow.actor) return;\n  let effect = chrisPremades.helpers.findEffect(workflow.actor, \"Rage\");\n  if (!effect) return;\n  await chrisPremades.helpers.removeEffect(effect);\n}\nasync function attack({\n  speaker,\n  actor,\n  token,\n  character,\n  item,\n  args,\n  scope,\n  workflow,\n}) {\n  //todo: Automate keeping track of attacks and being attacked.\n}\nasync function attacked({\n  speaker,\n  actor,\n  token,\n  character,\n  item,\n  args,\n  scope,\n  workflow,\n}) {}\nasync function animationStart(token, origin) {\n  //Animations by: eskiemoh\n  let animation =\n    new Sequence()\n\n      .effect()\n      .file(\"jb2a.extras.tmfx.outpulse.circle.02.normal\")\n      .atLocation(token)\n      .size(4, { gridUnits: true })\n      .opacity(0.25)\n\n      .effect()\n      .file(\"jb2a.impact.ground_crack.orange.02\")\n      .atLocation(token)\n      .belowTokens()\n      .filter(\"ColorMatrix\", { hue: -15, saturate: 1 })\n      .size(3.5, { gridUnits: true })\n      .zIndex(1)\n\n      .effect()\n      .file(\"jb2a.impact.ground_crack.still_frame.02\")\n      .atLocation(token)\n      .belowTokens()\n      .fadeIn(1000)\n      .filter(\"ColorMatrix\", { hue: -15, saturate: 1 })\n      .size(3.5, { gridUnits: true })\n      .zIndex(0)\n      .duration(8000)\n      .fadeOut(3000)\n\n      .effect()\n      .file(\"jb2a.wind_stream.white\")\n      .atLocation(token, { offset: { y: -0.05 }, gridUnits: true })\n      .size(1.75, { gridUnits: true })\n      .rotate(90)\n      .opacity(0.9)\n      .filter(\"ColorMatrix\", { saturate: 1 })\n      .tint(\"#FF0000\")\n      .loopProperty(\"sprite\", \"position.y\", {\n        from: -5,\n        to: 5,\n        duration: 50,\n        pingPong: true,\n      })\n      .duration(8000)\n      .fadeOut(3000)\n\n      .effect()\n      .file(\"jb2a.particles.outward.orange.01.03\")\n      .atLocation(token)\n      .scaleToObject(2.5)\n      .opacity(1)\n      .fadeIn(200)\n      .fadeOut(3000)\n      .loopProperty(\"sprite\", \"position.x\", {\n        from: -5,\n        to: 5,\n        duration: 50,\n        pingPong: true,\n      })\n      .animateProperty(\"sprite\", \"position.y\", {\n        from: 0,\n        to: -100,\n        duration: 6000,\n        pingPong: true,\n        delay: 2000,\n      })\n      .duration(8000)\n\n      .effect()\n      .file(\"jb2a.wind_stream.white\")\n      .atLocation(token)\n      .name(\"Rage\")\n      .attachTo(token)\n      .scaleToObject()\n      .rotate(90)\n      .opacity(1)\n      .filter(\"ColorMatrix\", { saturate: 1 })\n      .tint(\"#FF0000\")\n      .persist()\n      .private()\n\n      .effect()\n      .file(\"jb2a.token_border.circle.static.orange.012\")\n      .atLocation(token)\n      .name(\"Rage\")\n      .attachTo(token)\n      .opacity(0.6)\n      .scaleToObject(1.9)\n      .filter(\"ColorMatrix\", { saturate: 1 })\n      .tint(\"#FF0000\")\n      .persist()\n\n      .play();\n}\nasync function animationEnd(token, origin) {\n  await Sequencer.EffectManager.endEffects({ name: \"Rage\", object: token });\n  new Sequence()\n    .animation()\n    .on(token)\n    .opacity(1)\n\n    .play();\n}",
+        "author": "jM4h8qpyxwTpfNli",
+        "_id": null,
+        "folder": null,
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {},
+        "_stats": {
+          "systemId": null,
+          "systemVersion": null,
+          "coreVersion": null,
+          "createdTime": null,
+          "modifiedTime": null,
+          "lastModifiedBy": null
+        }
+      }
+    },
+    "dae": {},
+    "exportSource": {
+      "world": "Rime-of-the-Frost-Maiden",
+      "system": "dnd5e",
+      "coreVersion": "11.313",
+      "systemVersion": "2.3.1"
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:</p>\n<ul>\n<li>\n<p>You have advantage on Strength checks and Strength saving throws.</p>\n</li>\n<li>\n<p>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</p>\n</li>\n<li>\n<p>You have resistance to bludgeoning, piercing, and slashing damage.</p>\n</li>\n</ul>\n<p>If you are able to cast spells, you can't cast them or concentrate on them while raging. </p>\n<p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. </p>\n<p>Once you have raged the number of times shown for your barbarian level in the Rages column in the table below, you must finish a long rest before you can rage again.</p>\n<p><em style=\"box-sizing:border-box;user-select:text;color:#191813;font-size:13px\">**Foundry note: Note the limited uses is set to the base default of 2. Please manually adjust as required.</em></p>\n<table style=\"width:286px;height:170px\" border=\"1\">\n<tbody>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\"><strong>Barbarian Level</strong></td>\n<td style=\"width:68px;height:17px\"><strong>Rages</strong></td>\n<td style=\"width:96px;height:17px\"><strong>Rage Damage</strong></td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">1st</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">2nd</td>\n<td style=\"width:68px;height:17px\">2</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">3rd</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">4th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">5th</td>\n<td style=\"width:68px;height:17px\">3</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">6th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">7th</td>\n<td style=\"width:68px;height:17px\">4</td>\n<td style=\"width:96px;height:17px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">8th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+2</td>\n</tr>\n<tr>\n<td style=\"width:112px\">9th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">10th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">11th</td>\n<td style=\"width:68px\">4</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">12th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">13th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr>\n<td style=\"width:112px\">14th</td>\n<td style=\"width:68px\">5</td>\n<td style=\"width:96px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">15th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+3</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">16th</td>\n<td style=\"width:68px;height:17px\">5</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">17th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr>\n<td style=\"width:112px\">18th</td>\n<td style=\"width:68px\">6</td>\n<td style=\"width:96px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">19th</td>\n<td style=\"width:68px;height:17px\">6</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n<tr style=\"height:17px\">\n<td style=\"width:112px;height:17px\">20th</td>\n<td style=\"width:68px;height:17px\">Unlimited</td>\n<td style=\"width:96px;height:17px\">+4</td>\n</tr>\n</tbody>\n</table>\n<p> </p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "",
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 5,
+      "max": "@scale.barbarian.rages",
+      "per": "lr",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "",
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "recharge": {
+      "value": null,
+      "charged": false
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "11.313",
+    "createdTime": 1667768343480,
+    "modifiedTime": 1696866479866,
+    "lastModifiedBy": "jM4h8qpyxwTpfNli"
+  }
+}
