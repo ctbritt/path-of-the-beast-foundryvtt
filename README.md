@@ -1,3 +1,5 @@
+# RETIRED - Chris' Premades did a much better job on this. Please use his version. 
+
 # Path of the Beast Complete Macro
 
 A Macro for automating Path of the Beast weapons for a barbarian when they rage.
